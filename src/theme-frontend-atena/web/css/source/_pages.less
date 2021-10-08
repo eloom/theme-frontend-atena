@@ -5,10 +5,7 @@
 @pager-icon__font-size: @pager__font-size;
 @pager-icon__font-line-height: @icon-font__line-height;
 
-//
-//  Common
-//  _____________________________________________
-
+//  Common _____________________________________________
 & when (@media-common = true) {
 	.cms-index-index .navigation.wrapper {
 		margin-bottom: 0;
@@ -35,6 +32,33 @@
 
 		a.page {
 			padding: 0 1rem;
+		}
+	}
+}
+
+//  Desktop _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+	.cms-index-index {
+		.page-header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 5;
+			background: 0 0;
+		}
+
+		&:not('top-fixed') {
+
+			.navigation .level0 > .level-top {
+				color: #FFF;
+			}
+		}
+
+		&.top-fixed {
+			.page-header {
+				background-color: #FFF;
+			}
 		}
 	}
 }

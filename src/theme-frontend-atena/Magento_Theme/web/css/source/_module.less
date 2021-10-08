@@ -82,8 +82,9 @@
 				margin-right: @indent__base;
 
 				> li {
-					font-size: @font-size__base;
-					margin: 0 0 0 15px;
+					font-size: 1.4rem;
+					margin: 0 0 0 1.5rem;
+					text-transform: uppercase;
 
 					&.customer-welcome {
 						margin: 0 0 0 5px;
@@ -104,8 +105,6 @@
 	}
 
 	.logo {
-		float: left;
-		margin: 0 0 @indent__s 0;
 		max-width: 50%;
 		position: relative;
 		z-index: 5;
@@ -113,6 +112,7 @@
 		img {
 			display: block;
 			height: auto;
+			width: 120px;
 		}
 
 		.page-print & {
@@ -198,7 +198,7 @@
 		&.content {
 			padding-top: 2.5rem;
 			padding-bottom: 2.5rem;
-			color: @color-gray40;
+			color: var(--footer-color);
 
 			a {
 				.lib-link(
@@ -578,9 +578,7 @@
 	}
 }
 
-//
-//  Desktop
-//  _____________________________________________
+//  Desktop _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 	.page-wrapper {
 		> .breadcrumbs,
@@ -596,11 +594,11 @@
 
 	.header {
 		&.panel {
-			.lib-vendor-prefix-display(flex);
-			justify-content: left;
+			//.lib-vendor-prefix-display(flex);
+			//justify-content: left;
 
 			> .header.links {
-				float: none;
+				float: right;
 				.lib-list-inline();
 
 				> li {
@@ -623,24 +621,25 @@
 		&.content {
 			.lib-vendor-prefix-display(flex);
 			&:extend(.abs-add-clearfix-desktop all);
-			padding: @indent__base @indent__base 1rem;
+			padding-top: .75rem;
 			align-items: center;
+			justify-content: space-between;
 		}
 	}
 
 	.page-header {
 		border: 0;
 		margin-bottom: 0;
-		border-bottom: 1px solid var(--border-color);
+		//border-bottom: 1px solid var(--border-color);
 
 		.panel.wrapper {
-			border-bottom: 1px solid @secondary__color;
+			//border-bottom: 1px solid @secondary__color;
 		}
 
 		.header.panel {
 			&:extend(.abs-add-clearfix-desktop all);
-			padding: 0;
-			flex: 1;
+			padding-top: .75rem;
+			padding-bottom: 0;
 		}
 
 		.switcher {
@@ -732,11 +731,9 @@
 	}
 
 	.logo {
-		position: absolute;
-		left: 50%;
 		bottom: 0;
-		transform: translatex(-50%);
-		width: 200px;
+		//.lib-vendor-prefix-flex-basis(10%);
+		//.lib-vendor-prefix-flex-shrink(0);
 	}
 
 	.footer {
