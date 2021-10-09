@@ -30,6 +30,7 @@
 						<arguments>
 							<argument name="title" translate="true" xsi:type="string">Account</argument>
 							<argument name="use_force" xsi:type="boolean">true</argument>
+							<argument name="text" xsi:type="string"><![CDATA[<!-- Account links -->]]></argument>
 						</arguments>
 					</block>
 					<block class="Magento\Framework\View\Element\Template" name="store.settings" group="navigation-sections"
